@@ -1,15 +1,11 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This is a tool to be able to move files arround in a deployment process and is also a process starter for Dot.net core environments
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Clone to your $GOROOT/packmule
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+run "go build"
 
 # Contribute
 TODO: Explain how other users and developers can contribute to make your code better. 
