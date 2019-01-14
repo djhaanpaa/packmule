@@ -2,7 +2,7 @@
 This is a tool to be able to move files arround in a deployment process and is also a process starter for Dot.net core environments
 
 # Getting Started
-Clone to your $GOROOT/packmule
+Clone to your $GOROOT/go/src/packmule
 
 # Build and Test
 run "go build"
