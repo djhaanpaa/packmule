@@ -1,4 +1,0 @@
-homeFolder: "/home/smsapp"
-serviceName: "smsdev"
-serviceUrl: "http://localhost:5004"
-serviceEnv: "Development"
