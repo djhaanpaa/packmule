@@ -2,6 +2,7 @@ package data
 
 import (
 	"gopkg.in/yaml.v2"
+	"io/ioutil"
 	"os"
 )
 
@@ -9,14 +10,28 @@ type YamlFile struct {
 	HomeFolder string `yaml:"homeFolder"`
 	ServiceName string `yaml:"serviceName"`
 	ServiceUrl string `yaml:"serviceUrl"`
-	ServiceEnv string `yaml:"serviceEnvironment"`
+	ServiceEnvironment string `yaml:"serviceEnvironment"`
 
+}
+
+func ImportYamlFile(fileName string) (d YamlFile) {
+	b, err := ioutil.ReadFile(fileName)
+	if err == nil {
+		n := YamlFile{}
+		err = yaml.Unmarshal(b, &n)
+		if err == nil {
+
+			d = n
+		}
+
+	}
+	return
 }
 
 func GenerateExampleYaml(fileName string)  {
 	y := YamlFile{
 		HomeFolder:"/example",
-		ServiceEnv:"Development",
+		ServiceEnvironment:"Development",
 		ServiceName:"serviceName",
 		ServiceUrl:"http://localhost"}
 	d, err := yaml.Marshal(&y)
