@@ -1,5 +1,5 @@
 # Introduction 
-This is a tool to be able to move files arround in a deployment process and is also a process starter for Dot.net core environments
+This is a tool to be able to move files around in a deployment process 
 
 # Getting Started
 Clone to your $GOROOT/go/src/packmule
