@@ -2,9 +2,12 @@ package data
 
 import (
 	"fmt"
+	"github.com/gobuffalo/packr"
 	"io"
+	"log"
 	"os"
 	"os/exec"
+	"text/template"
 )
 
 func cp(dst, src string) error {
@@ -24,6 +27,19 @@ func cp(dst, src string) error {
 		return err
 	}
 	return d.Close()
+}
+
+func ExportServiceFiles(file YamlFile)  {
+	box := packr.NewBox("./templates")
+	svcFile, err := box.FindString("systemd.txt")
+	if err == nil {
+		tmpl, _ := template.New("systemD").Parse(svcFile)
+
+		_ = tmpl.Execute(os.Stdout, file)
+	} else {
+		log.Fatal(err)
+	}
+
 }
 
 func PathExists(dirName string) (b bool) {

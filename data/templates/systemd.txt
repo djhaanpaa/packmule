@@ -1,0 +1,23 @@
+# Startup Entry
+#
+# Environment: {{.ServiceEnvironment}}
+# Application: {{.ServiceName}}
+
+[Unit]
+Description=.net App Service {{.ServiceName}}
+
+[Service]
+WorkingDirectory={{.HomeFolder}}
+ExecStart={{.ServiceExecute}}
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=dotnet-{{.ServiceName}}
+User={{ .ServiceRunAs }}
+Environment=ASPNETCORE_ENVIRONMENT={{ .ServiceEnvironment}}
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+[Install]
+WantedBy=multi-user.target
+

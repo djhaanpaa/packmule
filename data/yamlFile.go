@@ -11,6 +11,8 @@ type YamlFile struct {
 	ServiceName string `yaml:"serviceName"`
 	ServiceUrl string `yaml:"serviceUrl"`
 	ServiceEnvironment string `yaml:"serviceEnvironment"`
+	ServiceExecute string `yaml:"serviceExecute"`
+	ServiceRunAs string `yaml:"serviceRunAs"`
 
 }
 

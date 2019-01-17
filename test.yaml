@@ -1,0 +1,6 @@
+homeFolder: /example
+serviceName: serviceName
+serviceUrl: http://localhost
+serviceEnvironment: Development
+serviceExecute: ""
+serviceRunAs: ""
