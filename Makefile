@@ -7,3 +7,6 @@ clean:
 	rm -rv *.yaml
 	rm -rv *.yml
 	rm -rv ./tmp
+pushtoscm:
+	git push origin master
+	git push github master
