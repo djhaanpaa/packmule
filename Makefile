@@ -10,3 +10,6 @@ clean:
 pushtoscm:
 	git push origin master
 	git push github master
+pullfromscm:
+	git pull origin master
+	git pull github master
